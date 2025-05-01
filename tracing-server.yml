@@ -1,6 +1,5 @@
 server:
   port: 9411
-
 ---
 spring:
   config:
@@ -20,3 +19,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
+  instance:
+    hostName: ${spring.application.name}
+    instanceId: ${spring.application.name}
